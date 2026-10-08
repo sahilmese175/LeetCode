@@ -1,7 +1,8 @@
 class MyStack {
-    private:
-        queue<int> q1;
-        queue<int> q2;
+
+    queue<int> q1;
+    queue<int> q2;
+
 public:
     MyStack() {
         
@@ -15,26 +16,22 @@ public:
             q2.push(q1.front());
             q1.pop();
         }
+
         swap(q1,q2);
-        
     }
     
     int pop() {
         int value = q1.front();
         q1.pop();
         return value;
-        
     }
     
     int top() {
-
         return q1.front();
-        
     }
     
     bool empty() {
         return q1.empty();
-        
     }
 };
 
